@@ -20,7 +20,7 @@ public class ProductServiceApplication {
     }
 
     @Bean
-    public RestTemplate restTemplate1() {
+    public RestTemplate restTemplateSimple() {
         return new RestTemplate();
     }
 
