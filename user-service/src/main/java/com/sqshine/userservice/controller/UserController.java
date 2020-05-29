@@ -51,6 +51,16 @@ public class UserController {
         return null;
     }
 
+    @GetMapping("/")
+    public User findById2(@RequestParam("id") Long id) {
+        for (User user : getUsers()) {
+            if (user.getId().equals(id)) {
+                return user;
+            }
+        }
+        return new User();
+    }
+
     @PostMapping("/")
     public User postUser(@RequestBody User user) {
         return user;
