@@ -45,7 +45,7 @@ public class ProductController {
     }
 
     @GetMapping("/user")
-    public User findById2(Long id) {
+    public User findById2(@RequestParam("id") Long id) {
         return restTemplate.getForObject("http://user-service/user/" + id, User.class);
     }
 

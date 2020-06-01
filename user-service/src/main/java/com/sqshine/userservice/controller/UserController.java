@@ -91,8 +91,6 @@ public class UserController {
     public ServiceInstance serviceInstance() {
         List<ServiceInstance> list = discoveryClient.getInstances(registration.getServiceId());
         if (list != null && list.size() > 0) {
-            //return list.get(0);
-
             //随机获取一个实例
             int i = new Random().nextInt(list.size());
             return list.get(i);
